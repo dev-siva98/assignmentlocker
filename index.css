@@ -13,7 +13,23 @@
 .locker-container {
   display: grid;
   justify-items: center;
-  gap: 20px;
+}
+
+.message {
+    visibility: hidden;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.success {
+    visibility: visible;
+    color: #03a003;
+}
+
+.failed {
+    visibility: visible;
+    color: #cc0202;
 }
 
 #display {
@@ -23,10 +39,12 @@
     font-size: 20px;
 }
 
+
 .keys-container {
   display: grid;
   grid-template-columns: 50px 50px 50px;
   gap: 15px;
+  margin-top: 20px;
 }
 
 .keys {
