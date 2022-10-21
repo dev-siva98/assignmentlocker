@@ -20,6 +20,7 @@
     width: 170px;
     padding: 5px;
     text-align: center;
+    font-size: 20px;
 }
 
 .keys-container {
@@ -31,6 +32,8 @@
 .keys {
   padding: 10px;
   cursor: pointer;
+  font-size: 18px;
+
 }
 
 .keys:hover {
