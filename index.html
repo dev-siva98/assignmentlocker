@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>locker</title>
+    <style src="index.css" onclick="handleClick(1)"></style>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
-    <style src="index.css"></style>
-</head>
-
-<body>
+  <body>
     <div class="parent-container">
-        <div class="parent">
-            <h1 class="parent-header">Locker</h1>
-            <div class="locker-container">
-                <div class="locker-display">
-
-                </div>
-                <div class="keys-container">
-
-                </div>
-            </div>
+      <div class="parent">
+        <h1 class="parent-header">Locker</h1>
+        <div class="locker-container">
+          <div class="locker-display">
+            <input id="display" type="number"></input>
+            <div class="output">1</div>
+            <div class="output">2</div>
+            <div class="output">3</div>
+            <div class="output">4</div>
+          </div>
+          <div class="keys-container">
+            <button class="keys" onclick="handleClick(1)">1</button>
+            <button class="keys" onclick="handleClick(2)">2</button>
+            <button class="keys" onclick="handleClick(3)">3</button>
+            <button class="keys" onclick="handleClick(4)">4</button>
+            <button class="keys" onclick="handleClick(5)">5</button>
+            <button class="keys" onclick="handleClick(6)">6</button>
+            <button class="keys" onclick="handleClick(7)">7</button>
+            <button class="keys" onclick="handleClick(8)">8</button>
+            <button class="keys" onclick="handleClick(9)">9</button>
+            <button class="keys" onclick="handleClear()">C</button>
+            <button class="keys" onclick="handleClick(0)">0</button>
+            <button class="keys" onclick="handleSubmit()">E</button>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-
+    <script src="index.js" onclick="handleClick(1)"></script>
+  </body>
 </html>
