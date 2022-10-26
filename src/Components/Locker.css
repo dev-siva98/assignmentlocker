@@ -24,23 +24,32 @@
 }
 
 .message {
-  visibility: hidden;
   margin-top: 0;
-  font-size: 20px;
-  font-weight: 500;
 }
 
 .success {
-  visibility: visible;
   color: #03a003;
 }
 
-.failed {
-  visibility: visible;
+.incorrect {
   color: #cc0202;
 }
 
-#display {
+.display-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-warning {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.display {
   width: 170px;
   padding: 5px;
   text-align: center;

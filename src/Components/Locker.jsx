@@ -4,24 +4,37 @@ import "./Locker.css";
 
 export default function Locker() {
   const [pin, setPin] = useState("");
+  const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
 
   const handleClick = (value) => {
+    setShow(false);
     setPin(pin + value);
   };
 
   const handleSubmit = () => {
-    pin === "1234" ? alert("Success") : alert("Incorrect");
+    if (pin === "1234") {
+      setMessage("success");
+    } else {
+      setMessage("incorrect");
+    }
+    setShow(true);
     setPin("");
   };
+
+  const handleClear = () => {
+    setPin("")
+    setShow(false)
+  }
 
   return (
     <div className="parent-container">
       <h1 className="header">Locker</h1>
       <div className="locker-container">
-        <p id="message" className="message">
-          Incorrect
-        </p>
-        <input id="display" type="text" value={pin}></input>
+        <div className="display-container">
+          {show && <p className={`display-warning ${message}`}>{message}</p>}
+          <input type="text" className="display" value={pin}></input>
+        </div>
         <div className="keys-container">
           <button className="keys" onClick={() => handleClick("1")}>
             1
@@ -50,7 +63,7 @@ export default function Locker() {
           <button className="keys" onClick={() => handleClick("9")}>
             9
           </button>
-          <button className="keys clear" onClick={() => setPin("")}>
+          <button className="keys clear" onClick={handleClear}>
             C
           </button>
           <button className="keys" onClick={() => handleClick("0")}>
