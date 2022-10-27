@@ -5,10 +5,9 @@ import "./Locker.css";
 export default function Locker() {
   const [pin, setPin] = useState("");
   const [message, setMessage] = useState("");
-  const [show, setShow] = useState(false);
 
   const handleClick = (value) => {
-    setShow(false);
+    setMessage("");
     setPin(pin + value);
   };
 
@@ -18,21 +17,20 @@ export default function Locker() {
     } else {
       setMessage("incorrect");
     }
-    setShow(true);
     setPin("");
   };
 
   const handleClear = () => {
-    setPin("")
-    setShow(false)
-  }
+    setPin("");
+    setMessage("");
+  };
 
   return (
     <div className="parent-container">
       <h1 className="header">Locker</h1>
       <div className="locker-container">
         <div className="display-container">
-          {show && <p className={`display-warning ${message}`}>{message}</p>}
+          {message && <p className={`display-warning ${message}`}>{message}</p>}
           <input type="text" className="display" value={pin}></input>
         </div>
         <div className="keys-container">
